@@ -2,11 +2,13 @@ import sys
 
 import pygame
 
+from Pilota import Pilota
 from constants import Constants
 
 pygame.init()
 
 finestraJoc = pygame.display.set_mode((Constants.AMPLE_ESCENARI, Constants.ALCADA_ESCENARI))
+pilota = Pilota(300, 200, 10, 10, (255, 255, 255))
 rellotge = pygame.time.Clock()
 
 gameOver = False
@@ -14,6 +16,7 @@ gameOver = False
 def pintaObjectes():
 
     finestraJoc.fill(Constants.VERD)
+    
     pygame.draw.rect(finestraJoc, Constants.BLAU, Constants.POSICIO_MARGE_DE_DALT)
     pygame.draw.rect(finestraJoc, Constants.BLAU, Constants.POSICIO_MARGE_DE_BAIX)
     pygame.draw.rect(finestraJoc, Constants.COLOR_J1, (jugador1.posX, jugador1.posY, 10, 40))
