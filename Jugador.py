@@ -1,4 +1,4 @@
-class jugador():
+class Jugador():
 
     def __init__(self, posX, posY, color, vel):
         self.posX = posX
