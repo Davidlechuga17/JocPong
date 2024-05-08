@@ -1,11 +1,17 @@
+
 from ObjecteEscenari import ObjecteEscenari
 from constants import Constants
 
+
+
 class Jugador(ObjecteEscenari):
 
-    def __init__(self, posX, posY, color, vel):
-        super.__init__(posX, posY, color)
+    def __init__(self, posX, posY, color, vel, punts=0):
+        self.posX = posX
+        self.posY = posY
+        self.color = color
         self.vel = vel
+        self.punts = punts
 
     def MovimentJugador1(teclas, pygame, jugador1):
         if teclas[pygame.K_w] and jugador1.posY>Constants.POSICIO_MARGE_DE_DALT[3]:
